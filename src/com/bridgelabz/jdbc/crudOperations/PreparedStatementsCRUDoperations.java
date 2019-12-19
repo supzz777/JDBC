@@ -1,3 +1,4 @@
+package com.bridgelabz.jdbc.crudOperations;
 import java.sql.*;
 
 public class PreparedStatementsCRUDoperations
@@ -11,7 +12,7 @@ public class PreparedStatementsCRUDoperations
 		 
 		 
 		try
-		{
+		{ 
 			//connection to database
 			Connection con = DriverManager.getConnection(url,user,password);
 			

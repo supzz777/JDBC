@@ -1,3 +1,4 @@
+package com.bridgelabz.jdbc.crudOperations;
 
 import java.sql.* ;
 
@@ -16,9 +17,9 @@ public class StatmentCRUDoperations
 		{
 			//connection to database
 			Connection con = DriverManager.getConnection(url,user,password);
-			
+			 
 			//create statement
-			Statement smt = con.createStatement();
+			Statement smt = con.createStatement();  
 			
 			
 			////write sql query of read employee table
@@ -48,11 +49,11 @@ public class StatmentCRUDoperations
 			
 			
 			
-/*		//write sql query of insert
+				//write sql query of insert
 			String insert ="insert into employees values ('8' ,'supzz','harami' "
 					+ ",'harami@gmail.com','semi',55000)" ;
 			smt.executeUpdate(insert);
-			System.out.println("insert completed"); */
+			System.out.println("insert completed"); 
 			
 			
 			

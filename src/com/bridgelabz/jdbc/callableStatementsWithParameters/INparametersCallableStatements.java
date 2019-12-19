@@ -1,3 +1,4 @@
+package com.bridgelabz.jdbc.callableStatementsWithParameters;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -7,7 +8,7 @@ import com.mysql.jdbc.Connection;
 import com.mysql.jdbc.PreparedStatement;
 import com.mysql.jdbc.Statement;
 
-public class CallableStatementsOperations 
+public class INparametersCallableStatements 
 {
 	
 	public static void main(String[] args) throws Exception
@@ -15,19 +16,19 @@ public class CallableStatementsOperations
 		Connection con  = null;
 		CallableStatement smt = null;
 		
-		
+		 
 		String url ="jdbc:mysql://localhost:3306/demo" ;
 		String user ="root";
-		String password = "password";
-		 
-		 try
+		String password = "password"; 
+		  
+		 try 
 		 {
 			 con = (Connection) DriverManager.getConnection(url,user,password);
 			 
 			 String dept = "engineering";
 			 int increase_amount = 10000;
 			 
-			 System.out.println("salaries before\n");
+			 System.out.println("salaries before\n"); 
 			 showSalaries(con,dept);
 			 
 			 // Prepare the stored procedure call
@@ -35,6 +36,7 @@ public class CallableStatementsOperations
 						
 
 				// Set the parameters
+				
 				smt.setString(1, dept);
 				smt.setDouble(2, increase_amount);
 
@@ -229,4 +231,4 @@ public class CallableStatementsOperations
 	}
 	*/
 
-
+     
